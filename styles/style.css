@@ -32,7 +32,7 @@ mark {
 
 header {
   position: fixed;
-  z-index: 100;
+  z-index: 1000;
   width: 100%;
 }
 
@@ -54,6 +54,15 @@ header li {
   color: white;
 }
 
+header li a {
+  color: white;
+  text-decoration: none;
+}
+
+header li a:hover {
+  border-bottom: 2px solid white;
+}
+
 .hero {
   width: 100%;
   height: 112vh;
@@ -64,6 +73,17 @@ header li {
 
 .overlay {
   background-image: url('../imgs/banner-one.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  display: table;
+}
+
+.overlay-lower {
+  background-image: url('../imgs/banner-one-flipped.png');
   background-repeat: no-repeat;
   background-position: right;
   width: 100%;
@@ -155,12 +175,12 @@ header li {
 .next-draw h1 {
   color: white;
   font-size: 50px;
-  margin: 40px 0 0 30px;
+  margin: 40px 0 0 40px;
 }
 
 .next-draw p {
   margin-top: 0;
-  margin: 0 0 0 30px;
+  margin: 0 0 0 40px;
   color: white;
   font-size: 20px;
 }
@@ -189,18 +209,20 @@ header li {
 
 }
 
-#timer span {
-  margin-right: 20px;
+#timer div {
+  margin-right: 30px;
   background: linear-gradient(to left, rgba(4,130,255,1) 0%, rgba(72,69,244,1) 100%);
-  padding: 5px;
   border-radius: 15px;
+  display: inline;
+  padding: 0 1.5% 0 1.5%;
 }
 
 .section {
   width: 100%;
   height: 100vh;
-  background-color: teal;
+  background: linear-gradient(to left, rgba(4,130,255,1) 0%, rgba(72,69,244,1) 100%);
 }
+
 
 .contain-clock {
   display: flex;
@@ -209,6 +231,61 @@ header li {
   text-align: center;
   width: 100%;
   height: 200px;
+}
+
+.large-left {
+  width: 40%;
+  height:100vh;
+  display: inline;
+  z-index: 50;
+  position: absolute;
+  background-image: url('../imgs/banner-card.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  margin:0;
+
+}
+
+.large-right {
+  width: 60%;
+  height: 100vh;
+  float: right;
+
+}
+
+.large-right h1{
+  color: white;
+  font-size: 50px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 30vh 0 0 0;
+
+}
+
+.large-right p {
+  color: white;
+  font-size: 20px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin: 15px 0 0 0;
+}
+
+#squares {
+  width: 100%;
+  text-align: center;
+}
+
+#squares div {
+  width: 250px;
+  height: 250px;
+  background-color: white;
+  border-radius: 20px;
+  margin: 80px 20px 0 0;
+  display: inline-block;
+  box-shadow: 0px 5px 100px 0px rgba(0, 0, 0, 0.3);
+
 }
 
 /* Login or Signup */

@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Hype Lotto | Win Hyped Goods Online</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/style.css" />
@@ -11,9 +11,11 @@
     <link rel="shortcut icon" type="image/png" href="imgs/favicon.png"/>
 
 
+
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 
   </head>
   <body>
@@ -22,11 +24,11 @@
       <img class="animated fadeInDown" src="imgs/logowhite.png" alt="logo" />
 
       <ul class="animated fadeInDown">
-        <li>home</li>
-        <li>about</li>
-        <li>contact</li>
+        <li><a href="#">home</a></li>
+        <li><a href="#">how-to</a></li>
+        <li><a href="#">questions</a></li>
         <li>|</li>
-        <li>login or signup</li>
+        <li><a href="#">login/signup</a></li>
       </ul>
     </header>
 
@@ -55,17 +57,120 @@
         <p>We hold drawings on a weekly basis, <br />prizes will vary on our current stock. </p>
       </div>
       <div id="timer">
-        <span>00</span>
-        <span>00</span>
-        <span>00</span>
+
+      </div>
+
+    </div>
+
+
+    <div class="section">
+
+        <div class="large-left">
+        </div>
+
+        <div class="large-right">
+
+
+
+          <h1>3 Simple Steps To Enter</h1>
+          <p>Our simple, secure, and quick online system <br /> will have you winning before you know it. </p>
+
+          <div id="squares">
+
+
+          <div>
+
+          </div>
+
+          <div>
+
+          </div>
+
+          <div>
+
+          </div>
+
+          </div>
+
+
         </div>
 
     </div>
 
     <div class="section">
+        <div class="overlay-lower">
+        </div>
+    </div>
+    </div>
 
-    </div>
-    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"></script>
+    <script>
+      countdown.setLabels('singular');
+      var saved = "";
+      var timerId =
+        countdown(
+          new Date('September 12, 2019 23:24:00'),
+          function(ts) {
+            console.log();
+            var mainOut = ts.toHTML("div");
+            var new1 = mainOut.split(" ");
+
+            function doubleO(n) {
+              console.log(n);
+              return (n < 10 ? '0' : '') + n;
+
+            }
+
+            var time1 = new1[0]+"</div>";
+            var time2 = new1[2]+"</div>";
+            var time3 = new1[5]+"</div>";
+
+            console.log(new1);
+
+
+            if(time3.includes(undefined)) {
+              time3 = "<div>00</div>";
+              time2 = new1[3]+"</div>";
+              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+            } else {
+              time1 = new1[0]+"</div>";
+              time2 = new1[2]+"</div>";
+              time3 = new1[5]+"</div>";
+              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+            }
+
+            if (time1.length == 12) {
+              temptime = time1.split(">");
+              time1 = "<div>0"+temptime[1]+">";
+              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+            }
+
+            if (time2.length == 12) {
+              temptime = time2.split(">");
+              console.log(temptime);
+              time2 = "<div>0"+temptime[1]+">";
+              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+            }
+
+            if (time3.length == 12) {
+              temptime = time3.split(">");
+              time3 = "<div>0"+temptime[1]+">";
+              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+            }
+
+          },
+          countdown.DAYS|countdown.HOURS|countdown.MINUTES);
+
+      var myVar = setInterval(timerId, 1000);
+      function stop() {
+        clearInterval(timerId);
+      }
+
+
+
+
+
+    </script>
     <script src="js/flipclock.min.js"></script>
     <script type="text/javascript">
       var clock = $('.clock').FlipClock(3600, {
