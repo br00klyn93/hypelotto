@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/flipclock.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" />
+    <link rel="shortcut icon" type="image/png" href="imgs/favicon.png"/>
+
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  </head>
+  <body>
+    <div id="main-contain">
+    <header>
+      <img class="animated fadeInDown" src="imgs/logowhite.png" alt="logo" />
+
+      <ul class="animated fadeInDown">
+        <li>home</li>
+        <li>about</li>
+        <li>contact</li>
+        <li>|</li>
+        <li>login or signup</li>
+      </ul>
+    </header>
+
+    <div class="overlay">
+      <div id="text">
+        <h2 class="animated fadeInLeft">Win Hyped Items Online</h2>
+        <br />
+        <h1 class="animated fadeInLeft delay-1s">Play Today, Win Today!</h1>
+
+        <button name="button" class="animated fadeInLeft delay-2s">Play Today</button>
+      </div>
+
+      <div class="die">
+        <img id="main-die" class="animated bounce slow" src="imgs/gambler.png" />
+        <img id="small-die" class="animated bounce slow delay-1s" src="imgs/gambler.png" />
+      </div>
+    </div>
+
+    <div class="hero">
+
+    </div>
+
+    <div class="next-draw">
+      <div id="draw-text">
+        <h1>Next Draw</h1>
+        <p>We hold drawings on a weekly basis, <br />prizes will vary on our current stock. </p>
+      </div>
+      <div id="timer">
+        <span>00</span>
+        <span>00</span>
+        <span>00</span>
+        </div>
+
+    </div>
+
+    <div class="section">
+
+    </div>
+    </div>
+    <script src="js/flipclock.min.js"></script>
+    <script type="text/javascript">
+      var clock = $('.clock').FlipClock(3600, {
+        countdown: true
+      });
+    </script>
+
+  </body>
+</html>

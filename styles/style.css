@@ -1,0 +1,269 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: circular;
+
+}
+
+:focus {
+  outline: none;
+}
+
+mark {
+  display: inline-block;
+  line-height: 0em;
+  padding-bottom: 0.5em;
+  background-color: rgba(72,69,244,0.5);
+}
+
+@font-face {
+  font-family: circular;
+  src: url('../fonts/circular.otf');
+}
+
+/* #main-contain {
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: auto;
+} */
+
+header {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+}
+
+header img {
+  margin: 1% 0 0 1%;
+  width: 200px;
+}
+
+header ul {
+  float: right;
+  margin: 2% 0.5% 0 0;
+  font-size: 18px;
+}
+
+header li {
+  display: inline;
+  list-style: none;
+  margin-right: 2rem;
+  color: white;
+}
+
+.hero {
+  width: 100%;
+  height: 112vh;
+
+  background: linear-gradient(to left, rgba(4,130,255,1) 0%, rgba(72,69,244,1) 100%);
+
+}
+
+.overlay {
+  background-image: url('../imgs/banner-one.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+  display: table;
+}
+
+.overlay h2 {
+  font-size: 25px;
+  color: white;
+  margin:0;
+}
+
+.overlay h1 {
+  margin: 0;
+  font-size: 50px;
+  color: white;
+}
+
+.die {
+   width: 50%;
+   float: right;
+}
+
+#main-die {
+  width: 500px;
+  position: absolute;
+  right: 18%;
+  top: 15vh;
+  z-index: 10;
+  transition: .2s ease-in;
+
+}
+
+#main-die:hover {
+  width: 505px;
+}
+
+#small-die {
+  position: absolute;
+  z-index: 5;
+  width: 350px;
+  right: 5%;
+  top: 35vh;
+  opacity: 0.8;
+  transition: .5s ease-in;
+}
+
+#text {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 15vw;
+}
+
+#text button {
+  padding: 15px 40px 15px 40px;
+  border-radius: 40px;
+  background-color: #ee005f;
+  color: white;
+  border: none;
+  font-size: 20px;
+  margin-top: 2rem;
+  text-shadow: 0px 0px 12px rgba(255,255,255,0.58);
+  -webkit-box-shadow: 0px 0px 26px -9px rgba(255,255,255,0.39);
+  box-shadow: 0px 0px 26px -9px rgba(255,255,255,0.39);
+  transition: .2s ease-in;
+}
+
+#text button:hover {
+  -webkit-box-shadow: 0px 0px 26px 1px rgba(255,255,255,0.39);
+  box-shadow: 0px 0px 26px 1px rgba(255,255,255,0.39);
+}
+
+.next-draw {
+  width: 50vw;
+  position: absolute;
+  left: 50%;
+  margin-left: calc(-50vw / 2);
+  height: 200px;
+  background-color: rgb(19, 26, 62);
+  border-radius: 10px;
+  bottom: -200px;
+  z-index: 100;
+  box-shadow: 0px 5px 100px 0px rgba(0, 0, 0, 0.3);
+}
+
+.next-draw h1 {
+  color: white;
+  font-size: 50px;
+  margin: 40px 0 0 30px;
+}
+
+.next-draw p {
+  margin-top: 0;
+  margin: 0 0 0 30px;
+  color: white;
+  font-size: 20px;
+}
+
+#draw-text {
+  width:50%;
+  display: inline;
+  float:left;
+  height:200px;
+}
+
+#draw-times {
+  width: 50%;
+  float: right;
+  display: inline;
+  height: 200px;
+}
+
+#timer {
+  display: inline;
+  font-size: 60px;
+  color: white;
+  margin: 0 0 0 50px;
+  line-height: 200px;
+
+
+}
+
+#timer span {
+  margin-right: 20px;
+  background: linear-gradient(to left, rgba(4,130,255,1) 0%, rgba(72,69,244,1) 100%);
+  padding: 5px;
+  border-radius: 15px;
+}
+
+.section {
+  width: 100%;
+  height: 100vh;
+  background-color: teal;
+}
+
+.contain-clock {
+  display: flex;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 200px;
+}
+
+/* Login or Signup */
+
+#login-form {
+  margin: auto;
+  width: 25%;
+  height: 500px;
+  background-color: white;
+  z-index: 100;
+  box-shadow: 0px 5px 40px 0px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border-radius: 5px;
+}
+
+#login-form h1 {
+  font-size: 35px;
+  text-align: center;
+  margin-top: 20%;
+  margin-bottom: 0;
+  color: black!important;
+}
+
+#login-form form {
+  margin-top: 10%;
+}
+
+#login-form input {
+  margin-top: 5%;
+  border: 2px solid #232323;
+  border-radius: 10px;
+}
+
+#email {
+  width: 65%;
+  margin:auto;
+  padding: 15px;
+  font-size: 15px;
+}
+
+#pw {
+  width: 65%;
+  margin:auto;
+  padding: 15px;
+  font-size: 15px;
+}
+
+#login {
+  width: 50%;
+  margin:auto;
+  padding: 15px;
+  margin-top: 15%;
+  border: none;
+  border-radius: 10px;
+  background-color: #232323;
+  color: white;
+  font-size: 20px;
+}
