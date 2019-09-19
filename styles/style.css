@@ -5,6 +5,10 @@ html, body {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :focus {
   outline: none;
 }
@@ -203,18 +207,40 @@ header li a:hover {
   display: inline;
   font-size: 60px;
   color: white;
+  margin: 0;
+  line-height: 200px;
+
+
+}
+
+#interior {
+  display: inline;
+  font-size: 60px;
+  color: white;
   margin: 0 0 0 50px;
   line-height: 200px;
 
 
 }
 
-#timer div {
+#interior div {
   margin-right: 30px;
   background: linear-gradient(to left, rgba(4,130,255,1) 0%, rgba(72,69,244,1) 100%);
   border-radius: 15px;
   display: inline;
   padding: 0 1.5% 0 1.5%;
+}
+
+#test {
+  display: block;
+  background-image: url("../imgs/underbar.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 45%;
+  float: right;
+  margin-top: -50px;
 }
 
 .section {

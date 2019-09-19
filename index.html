@@ -25,8 +25,8 @@
 
       <ul class="animated fadeInDown">
         <li><a href="#">home</a></li>
-        <li><a href="#">how-to</a></li>
-        <li><a href="#">questions</a></li>
+        <li><a href="#how-to">how-to</a></li>
+        <li><a href="#questions">questions</a></li>
         <li>|</li>
         <li><a href="#">login/signup</a></li>
       </ul>
@@ -38,7 +38,7 @@
         <br />
         <h1 class="animated fadeInLeft delay-1s">Play Today, Win Today!</h1>
 
-        <button name="button" class="animated fadeInLeft delay-2s">Play Today</button>
+        <button name="button" class="animated fadeInLeft delay-2s" href="#how-to"><a href="#how-to" style="text-decoration: none; color: white;">Play Today</a></button>
       </div>
 
       <div class="die">
@@ -57,36 +57,44 @@
         <p>We hold drawings on a weekly basis, <br />prizes will vary on our current stock. </p>
       </div>
       <div id="timer">
+        <div id="interior">
+
+        </div>
+        <!-- <div id="test">
+
+
+        </div> -->
 
       </div>
+
 
     </div>
 
 
-    <div class="section">
+    <div class="section" id="how-to">
 
-        <div class="large-left">
+        <div class="large-left wow fadeIn slow">
         </div>
 
         <div class="large-right">
 
 
 
-          <h1>3 Simple Steps To Enter</h1>
-          <p>Our simple, secure, and quick online system <br /> will have you winning before you know it. </p>
+          <h1 class="wow fadeInRight slow">3 Simple Steps To Enter</h1>
+          <p class="wow fadeIn delay-1s">Our simple, secure, and quick online system <br /> will have you winning before you know it. </p>
 
           <div id="squares">
 
 
-          <div>
+          <div class="wow fadeIn">
 
           </div>
 
-          <div>
+          <div class="wow fadeIn delay-1s">
 
           </div>
 
-          <div>
+          <div class="wow fadeIn delay-2s">
 
           </div>
 
@@ -97,16 +105,18 @@
 
     </div>
 
-    <div class="section">
+    <div class="section" id="questions">
         <div class="overlay-lower">
         </div>
     </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/countdown/2.6.0/countdown.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>
-      countdown.setLabels('singular');
-      var saved = "";
+      new WOW().init();
+    </script>
+    <script>
       var timerId =
         countdown(
           new Date('September 12, 2019 23:24:00'),
@@ -131,31 +141,31 @@
             if(time3.includes(undefined)) {
               time3 = "<div>00</div>";
               time2 = new1[3]+"</div>";
-              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+              document.getElementById("interior").innerHTML = time1 + time2 + time3;
             } else {
               time1 = new1[0]+"</div>";
               time2 = new1[2]+"</div>";
               time3 = new1[5]+"</div>";
-              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+              document.getElementById("interior").innerHTML = time1 + time2 + time3;
             }
 
             if (time1.length == 12) {
               temptime = time1.split(">");
               time1 = "<div>0"+temptime[1]+">";
-              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+              document.getElementById("interior").innerHTML = time1 + time2 + time3;
             }
 
             if (time2.length == 12) {
               temptime = time2.split(">");
               console.log(temptime);
               time2 = "<div>0"+temptime[1]+">";
-              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+              document.getElementById("interior").innerHTML = time1 + time2 + time3;
             }
 
             if (time3.length == 12) {
               temptime = time3.split(">");
               time3 = "<div>0"+temptime[1]+">";
-              document.getElementById("timer").innerHTML = time1 + time2 + time3;
+              document.getElementById("interior").innerHTML = time1 + time2 + time3;
             }
 
           },
