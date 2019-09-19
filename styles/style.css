@@ -343,9 +343,9 @@ header li a:hover {
 
 .main-box {
   width: 50%;
-  height: 90vh;
+  height: 500px;
   background-color: white;
-
+  flex-direction: column;
 }
 
 /* Login or Signup */
