@@ -104,7 +104,9 @@ header li a:hover {
   height: 100vh;
   position: absolute;
   z-index: 1;
-  display: table;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 }
 
 .overlay h2 {
@@ -321,6 +323,28 @@ header li a:hover {
   margin: 80px 20px 0 0;
   display: inline-block;
   box-shadow: 0px 5px 100px 0px rgba(0, 0, 0, 0.3);
+  transition: .2s ease-in;
+
+}
+
+#squares div:hover {
+  border-radius: 125px;
+}
+
+#squares div img {
+  margin-top: 35px;
+}
+
+
+
+#squares div p {
+  color: black;
+}
+
+.main-box {
+  width: 50%;
+  height: 90vh;
+  background-color: white;
 
 }
 
